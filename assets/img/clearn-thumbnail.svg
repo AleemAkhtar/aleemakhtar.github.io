@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="CLEARN application thumbnail placeholder">
+  <rect width="600" height="400" fill="#eef3fa"/>
+  <rect x="40" y="40" width="520" height="320" rx="14" fill="#ffffff" stroke="#d4e0f0" stroke-width="2"/>
+  <rect x="70" y="74" width="180" height="22" rx="4" fill="#2f6fb3"/>
+  <rect x="70" y="116" width="460" height="12" rx="6" fill="#dbe6f4"/>
+  <rect x="70" y="140" width="420" height="12" rx="6" fill="#dbe6f4"/>
+  <rect x="70" y="178" width="460" height="120" rx="8" fill="#0f2742"/>
+  <text x="92" y="214" font-family="Consolas, monospace" font-size="16" fill="#9cc0ec">#include &lt;stdio.h&gt;</text>
+  <text x="92" y="240" font-family="Consolas, monospace" font-size="16" fill="#ffffff">int main() {</text>
+  <text x="112" y="266" font-family="Consolas, monospace" font-size="16" fill="#c3d3e8">printf("CLEARN");</text>
+  <text x="92" y="292" font-family="Consolas, monospace" font-size="16" fill="#ffffff">}</text>
+  <text x="70" y="338" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f2742">CLEARN &#183; Learn C Programming</text>
+</svg>

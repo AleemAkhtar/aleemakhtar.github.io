@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Profile photo placeholder">
+  <rect width="400" height="400" fill="#e8eef6"/>
+  <circle cx="200" cy="158" r="74" fill="#c3d3e8"/>
+  <path d="M64 360c0-75 61-122 136-122s136 47 136 122z" fill="#c3d3e8"/>
+  <text x="200" y="388" font-family="Inter, Arial, sans-serif" font-size="18" fill="#46617f" text-anchor="middle">Aleem Akhtar</text>
+</svg>
