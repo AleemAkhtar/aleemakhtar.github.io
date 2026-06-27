@@ -8,6 +8,7 @@
   var navbar = document.getElementById("mainNav");
   var navCollapse = document.getElementById("navItems");
   var backToTop = document.getElementById("backToTop");
+  var themeToggle = document.getElementById("themeToggle");
 
   var prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
@@ -83,4 +84,25 @@
 
   window.addEventListener("scroll", toggleBackToTop, { passive: true });
   toggleBackToTop();
+
+  /* ---- Light / dark theme toggle ---- */
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-bs-theme", theme);
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (e) {}
+    if (themeToggle) {
+      themeToggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+    }
+  }
+
+  if (themeToggle) {
+    // Sync the button state with the theme applied by the inline head script.
+    applyTheme(document.documentElement.getAttribute("data-bs-theme") || "light");
+
+    themeToggle.addEventListener("click", function () {
+      var current = document.documentElement.getAttribute("data-bs-theme");
+      applyTheme(current === "dark" ? "light" : "dark");
+    });
+  }
 })();

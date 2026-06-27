@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Apply saved/preferred colour theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-bs-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
 
   <title>Aleem Akhtar, Computer Science Educator and Technology Enhanced Learning Researcher</title>
   <meta name="description"
@@ -46,10 +57,17 @@
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top site-nav" aria-label="Primary navigation">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#home">Aleem Akhtar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems"
-        aria-controls="navItems" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="d-flex align-items-center order-lg-last">
+        <button class="theme-toggle me-2 me-lg-0" id="themeToggle" type="button" aria-label="Toggle light and dark theme"
+          aria-pressed="false" title="Toggle theme">
+          <i class="bi bi-moon-stars theme-icon-dark" aria-hidden="true"></i>
+          <i class="bi bi-sun-fill theme-icon-light" aria-hidden="true"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems"
+          aria-controls="navItems" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
       <div class="collapse navbar-collapse" id="navItems">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -173,19 +191,11 @@
         </p>
         <ul class="tag-list list-unstyled">
           <li class="tag">Technology Enhanced Learning</li>
-          <li class="tag">Programming Education</li>
           <li class="tag">Computer Science Education</li>
           <li class="tag">ICT in Education</li>
           <li class="tag">Computer Assisted Learning</li>
-          <li class="tag">Teacher Assisted Learning</li>
-          <li class="tag">Student Assessment</li>
           <li class="tag">Educational Technology</li>
           <li class="tag">Educational Informatics</li>
-          <li class="tag">Teacher Education</li>
-          <li class="tag">Learning Applications</li>
-          <li class="tag">Computational Thinking</li>
-          <li class="tag">Feedback in Programming Education</li>
-          <li class="tag">Beginner Programming Support</li>
         </ul>
       </div>
     </section>
